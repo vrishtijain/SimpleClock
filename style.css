@@ -1,0 +1,111 @@
+html, body {
+	height: 100%;
+	font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  body , .container 
+  {
+  	width: 100%;
+  	height: auto;
+  }
+  .clock{
+  	top: 25%;
+	left: 40%;
+	width: 100px;
+	height: 100px;
+  }
+}
+body { background-image: url("back2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.container{
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+
+}
+ /*for digital clock with class == clock*/
+.clock {
+
+	position: absolute;
+	top: 50%;
+	left: 80%;
+	width: 500px;
+	height: 200px;
+	transform: translateX(-50%) translateY(-50%);
+	color: black;
+	font-size: 60px;
+	font-family: sans-serif;
+	letter-spacing: 5px;
+
+
+
+}
+
+/* for analog analog-clock */
+#AnalogClock{
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	display: flex;
+	object-fit: cover;
+	flex-wrap: wrap;
+
+
+}
+#canvas{
+	height: auto;
+  width: 100%
+}
+
+ /*for Alarm's style*/
+#alarm-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align:center;
+	 object-fit: cover;
+	font-family:sans-serif;
+	font-size: 1em;
+	padding: 0.7em;
+	color: black;
+	font-weight: bold;
+}
+.buttons{
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+
+	justify-content: center;
+	flex-wrap: wrap;
+    object-fit: cover;
+}
+label { 
+	display:inline-block;
+}
+select{
+	width:70px;
+	font-weight: bold;
+}
+
+
+#setButton {
+	margin-left: 40px;
+
+	
+	margin-top:10px;
+}
+
+#clearButton{
+	margin-left: 40px;
+
+	
+	margin-top:10px;
+}
+
+

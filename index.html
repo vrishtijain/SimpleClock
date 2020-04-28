@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<head>
+	
+<meta name="viewport" content=" width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+	<title>MY CLOCK</title>
+</head>
+<body  onload="showAnalogClock()">
+
+	
+	<div class=buttons>
+	<input type="button" class="btn btn-primary btn-lg"  value="CLICK FOR  ANALOG TO DIGITAL" name="AtoD" onclick="showDigitalClock()" >	
+	<input type="button" class="btn btn-primary btn-lg"  value="CLICK FOR DIGITAL TO ANALOG"  name="DtoA" onclick="showAnalogClock()" >	
+	<input type="button"  class="btn btn-primary btn-lg"  value="CLICK FOR 12H to 24H"  name="DtoA" onclick="showDigitalClock2()" >	
+</div>
+<div class=container>
+		<div id="AnalogClock" >
+			<canvas id="canvas" width="400" height="400">
+			</canvas>
+
+		</div>
+
+		<div id="DigitalClock" class="clock" ></div>
+		<div id="DigitalClock2" class="clock" >
+
+
+		</div>
+	</div>
+	<div id='main-container'>
+		<h2 id='clock'></h2>
+	</div>
+
+	<div id='alarm-container'>
+	<div>
+		
+	<h1>Set Alarm Time</h1>
+		</div>
+		<div>
+		<label>
+			<div>
+				<select id='alarmhrs' ></select>
+			</div>
+		</label>
+		<label>
+			<div>
+				<select id='alarmmins' ></select>
+			</div>
+		</label>
+		<label>
+			<div>
+				<select id='alarmsecs' ></select>
+			</div>
+		</label>
+		<label>
+			<div>
+				<select id="ampm">
+					<option value="AM">AM</option>
+					<option value="PM">PM</option>
+				</select>
+			</div>
+		</label>
+		   </div>
+		   <div>
+			<div>
+				<button class="btn btn-primary btn-lg"  id='setButton' onclick='alarmSet()'>Set Alarm</button>
+			</div>
+
+			<div>
+				<button   class="btn btn-primary btn-lg" id='clearButton' onclick='alarmClear()'>Clear Alarm</button>
+			</div>
+		</div>
+		</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="clock.js"></script>
+</body>
+</html>
